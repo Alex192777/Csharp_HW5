@@ -150,6 +150,7 @@ class Program
         Console.WriteLine("Новый массив без строки и столбца с минимальным элементом:");
         PrintArray(newArray);
     }
+    
 
     // метод для вывода двумерного массива в консоль
     static void PrintArray(int[,] array)
