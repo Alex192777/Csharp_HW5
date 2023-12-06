@@ -9,88 +9,6 @@
 // 2 6 9     4 6
 // 4 6 2
 
-// using System;
-
-// class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         // Создание двумерного рандомного массива
-//         int[,] array = GenerateRandomArray(5, 5, 1, 9);
-        
-//         Console.WriteLine("Исходный массив:");
-//         PrintArray(array);
-
-//         // Находим индексы наименьшего элемента массива
-//         int minRow = 0;
-//         int minCol = 0;
-//         int minValue = array[0, 0];
-//         for (int i = 0; i < array.GetLength(0); i++)
-//         {
-//             for (int j = 0; j < array.GetLength(1); j++)
-//             {
-//                 if (array[i, j] < minValue)
-//                 {
-//                     minValue = array[i, j];
-//                     minRow = i;
-//                     minCol = j;
-//                 }
-//             }
-//         }
-
-//         // Создание нового массива без строки и столбца с наименьшим элементом
-//         int[,] newArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
-//         int newRow = 0;
-//         for (int i = 0; i < array.GetLength(0); i++)
-//         {
-//             if (i == minRow)
-//                 continue;
-
-//             int newCol = 0;
-//             for (int j = 0; j < array.GetLength(1); j++)
-//             {
-//                 if (j == minCol)
-//                     continue;
-
-//                 newArray[newRow, newCol] = array[i, j];
-//                 newCol++;
-//             }
-
-//             newRow++;
-//         }
-
-//         Console.WriteLine("Массив после удаления строки и столбца с наименьшим элементом:");
-//         PrintArray(newArray);
-//     }
-
-//     // Метод для генерации двумерного рандомного массива
-//     static int[,] GenerateRandomArray(int rows, int cols, int minValue, int maxValue)
-//     {
-//         Random random = new Random();
-//         int[,] array = new int[rows, cols];
-//         for (int i = 0; i < rows; i++)
-//         {
-//             for (int j = 0; j < cols; j++)
-//             {
-//                 array[i, j] = random.Next(minValue, maxValue + 1);
-//             }
-//         }
-//         return array;
-//     }
-
-//     // Метод для вывода двумерного массива на консоль
-//     static void PrintArray(int[,] array)
-//     {
-//         for (int i = 0; i < array.GetLength(0); i++)
-//         {
-//             for (int j = 0; j < array.GetLength(1); j++)
-//             {
-//                 Console.Write(array[i, j] + " ");
-//             }
-//             Console.WriteLine();
-//         }
-//     }
-// }
 
 using System;
 
@@ -150,7 +68,7 @@ class Program
         Console.WriteLine("Новый массив без строки и столбца с минимальным элементом:");
         PrintArray(newArray);
     }
-    
+
 
     // метод для вывода двумерного массива в консоль
     static void PrintArray(int[,] array)
